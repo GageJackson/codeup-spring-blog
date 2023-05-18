@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="EN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Roller</title>
+</head>
+<body>
+<h1>Which side do you think the dice will land on?</h1>
+<h2 th:text="${guess}"></h2>
+<h2 th:text="${roll}"></h2>
+<h3 th:if="${correctGuess}">You chose wisely!</h3>
+<h3 th:if="${!correctGuess}">You chose poorly!</h3>
+<div>
+    <form action="/dice-roller" method="post">
+        <button type="submit" name="rollGuess" value="1">1</button>
+        <button type="submit" name="rollGuess" value="2">2</button>
+        <button type="submit" name="rollGuess" value="3">3</button>
+        <button type="submit" name="rollGuess" value="4">4</button>
+        <button type="submit" name="rollGuess" value="5">5</button>
+        <button type="submit" name="rollGuess" value="6">6</button>
+    </form>
+</div>
+</body>
+</html>

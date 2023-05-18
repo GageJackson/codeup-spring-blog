@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="partials/navbar :: head">
+
+</head>
+<body>
+<nav th:replace="partials/navbar :: navbar">
+    This div will be *replaced* by the fragment
+</nav>
+
+<h1>Your Posts</h1>
+<div th:each="post : ${savedPosts}">
+    <h2 th:text="${post.title}" ></h2>
+    <p th:text="${post.body}"></p>
+</div>
+</body>
+</html>
